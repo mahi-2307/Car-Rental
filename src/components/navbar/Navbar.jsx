@@ -2,46 +2,82 @@ import React from "react";
 import "./Navbar.scss";
 import logo from "../../assets/logo.avif";
 import { Link } from "react-scroll";
-
+import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 function Navbar() {
+  const [menu, setMenu] = useState(false);
   return (
     <nav className="navbar">
-      <div className="left">
-        <img src={logo} alt="" className="logo" />
-      </div>
-      <div className="center">
+      <img src={logo} alt="Logo" className="logo" />
+      <div className="desktopMenu">
         <Link
           activeClass="active"
-          spy={true}
           to="intro"
           smooth={true}
+          offset={-100}
           duration={500}
+          className="desktopMenuList"
         >
           Home
         </Link>
         <Link
           activeClass="active"
-          spy={true}
-          to="why"
+          to="about"
           smooth={true}
+          offset={-73}
           duration={500}
+          className="desktopMenuList"
         >
           About
         </Link>
         <Link
           activeClass="active"
-          spy={true}
-          to="footer"
+          to="contact"
           smooth={true}
+          offset={-60}
           duration={500}
+          className="desktopMenuList"
         >
           Contact
         </Link>
       </div>
-      <div className="right">
-        <button id="signin">Sign In</button>
-        <button id="register">Register</button>
+      <button
+        className="mobmenu"
+        onClick={() => {
+          setMenu(!menu);
+        }}
+      ><MenuIcon className="icon"/></button>
+      <div className="mobNavMenu" style={{ display: menu ? "flex" : "none" }}>
+      <Link
+          activeClass="active"
+          to="intro"
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="desktopMenuList"
+        >
+          Home
+        </Link>
+        <Link
+          activeClass="active"
+          to="about"
+          smooth={true}
+          offset={-73}
+          duration={500}
+          className="desktopMenuList"
+        >
+          About
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          smooth={true}
+          offset={-60}
+          duration={500}
+          className="desktopMenuList"
+        >
+          Contact
+        </Link>
       </div>
     </nav>
   );

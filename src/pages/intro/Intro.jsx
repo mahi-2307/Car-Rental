@@ -10,15 +10,10 @@ function Intro() {
           <p className="top">Plan your trip now</p>
           <br />
           <p className="middle">
-            Save <span>BIG</span> with our
+            Save <span>BIG</span> with our car rental
           </p>
-          <p className="middle">car rental</p>
-          <br />
           <p className="tagline">
-            Rent the car of your dreams.
-            <br />
-            Unbeatable prices, unlimited miles, flexible pick-up options and
-            much more.
+            Rent the car of your dreams.Unbeatable prices, unlimited miles,Intro<br/> flexible pick-up options and much more.
           </p>
           <div className="bottom">
             <button className="book">
@@ -32,7 +27,7 @@ function Intro() {
                 Book Now
               </Link>
             </button>
-            <button className="learnMore">Learn More &gt;</button>
+            <button className="learnMore">Learn More</button>
           </div>
         </div>
         <div className="right">

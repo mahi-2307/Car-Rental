@@ -9,6 +9,7 @@ function Cardetails({ selectedCar }) {
     <div className="container_carDetails">
       <div className="details">
         <h2>{selectedCarData.Name}</h2>
+        <div className="list_of_details">
         <p>
           <span>Price</span>: ${selectedCarData.price}
         </p>
@@ -24,6 +25,7 @@ function Cardetails({ selectedCar }) {
         <p>
           <span>Fuel</span>: {selectedCarData.Fuel}
         </p>
+        </div>
       </div>
       <button>
         <Link activeClass="active" to="bookCar" smooth={true} duration={500} offset={-100}>

@@ -1,28 +1,33 @@
+@import "../../Styles.scss";
 .carfleet {
+  margin: 50px 0;
   height: 100vh;
-  .container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px;
-    gap: 80px;
-    .top {
-      text-align: center;
-      p {
-        font-size: 20px;
-      }
-      h1 {
-        font-size: 50px;
+  .top {
+    text-align: center;
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    @include mobile{
+      h1{
+        font-size: 30px;
       }
     }
+  }
     .bottom {
       display: grid;
-      grid-template-columns: 30% auto auto;
+      grid-template-columns: auto max-content auto;
       align-items: center;
+      padding: 20px ;
+      // justify-content: center;
+      gap: 20px;
       .list-of-cars {
         display: flex;
         flex-direction: column;
         button {
-          width: 55%;
+          width: 100%;
           height: 50px;
           margin: 5px 0;
           font-size: 20px;
@@ -41,7 +46,34 @@
           width: 450px;
           height: 300px;
         }
+        @include tablet{
+          img {
+            width: 350px;
+            height: 200px;
+          }
+        }
       }
     }
-  }
+    @include mobile{
+      .bottom{
+      display: flex;
+      flex-direction: column;
+      .list-of-cars {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        button {
+          width: 40vw;          
+        }
+        .selected {
+          background-color: #e88432;
+          color: white;
+          outline: none;
+        }
+      }
+      }
+    }
+  
 }

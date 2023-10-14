@@ -1,14 +1,17 @@
+@import "../../Styles.scss";
 .bookCar {
-margin-top: 50px;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .container {
+    margin: 0 100px;
+    box-shadow: 1px 1px 10px 1px gray;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    width: 90%;
-    margin-left: 50px;
-    height: 60vh;
-    box-shadow: 1px 1px 10px 1px gray;
+    gap: 30px;
+    width: fit-content;
+    height: fit-content;
     padding: 39px 60px;
     .title {
       h1 {
@@ -19,8 +22,9 @@ margin-top: 50px;
       form {
         display: grid;
         grid-template-columns: auto auto auto;
-        gap: 30px 100px;
-
+        gap: 30px 50px;
+        justify-content: center;
+        align-items: center;
         .book_form {
           label {
             font-weight: 600;
@@ -39,6 +43,10 @@ margin-top: 50px;
             padding: 1.2rem 1.3rem;
             cursor: pointer;
           }
+        }
+        @include tablet {
+          display: grid;
+          grid-template-columns: auto auto;
         }
       }
 
@@ -73,6 +81,26 @@ margin-top: 50px;
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    .container {
+      margin: 0 170px;
+      justify-content: center;
+      align-items: center;
+      .form {
+        form {
+          grid-template-columns: auto;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @media screen and (max-width :600px) {
+    .container {
+      margin: 0 60px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 .booking-modal {
   border-radius: 10px;
@@ -95,6 +123,7 @@ margin-top: 50px;
     display: flex;
     justify-content: space-between;
     background-color: rgb(242, 181, 13);
+    padding: 5px 10px;
     button {
       padding: px 15px;
       cursor: pointer;
@@ -108,7 +137,7 @@ margin-top: 50px;
   .booking-modal__car-info {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: 1px solid black;
     .dates-div {
       h5 {
@@ -132,15 +161,28 @@ margin-top: 50px;
         margin-top: 20px;
       }
       img {
+        height: 250px;
+        width: 300px;
+      }
+    }
+  }
+  @include mobile {
+    .booking-modal__car-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
         height: 300px;
-        width: 450px;
+        width: 200px;
       }
     }
   }
   .booking-modal__person-info {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    justify-content: center;
+    padding-left: 80px;
     h4 {
       padding: 10px 0;
       font-size: 20px;
@@ -189,7 +231,7 @@ margin-top: 50px;
     .reserve-button {
       button {
         margin: 10px 0;
-cursor: pointer;
+        cursor: pointer;
         padding: 10px;
         background-color: orange;
         border: none;
@@ -204,7 +246,11 @@ cursor: pointer;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgb(100, 100, 100); // Change the color of the scrollbar thumb
+    background-color: rgb(
+      100,
+      100,
+      100
+    ); // Change the color of the scrollbar thumb
     border-radius: 6px; // Add rounded corners to the thumb
   }
 
@@ -212,12 +258,7 @@ cursor: pointer;
     background-color: #acacac; // Change the color of the scrollbar track
     border-radius: 6px; // Add rounded corners to the track
   }
-  
 }
 .booking-modal.active-modal {
   display: block;
-  backdrop-filter: blur(5px); // Adjust the blur amount as needed
-    background-color: rgba(255, 255, 255, 0.7); 
-  /* or display: flex; depending on your modal structure */
 }
-

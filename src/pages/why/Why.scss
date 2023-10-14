@@ -1,11 +1,11 @@
+@import "../../Styles.scss";
 .why {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin: 50px 0;
+  padding: 50px 0;
   height: 100vh;
   h4 {
     font-size: 60px;
+    text-align: center;
   }
   .why_content {
     display: flex;
@@ -80,7 +80,8 @@
           }
           p {
             padding: 10px 0;
-            font-size: 15px;font-weight: 500;
+            font-size: 15px;
+            font-weight: 500;
             line-height: 26px;
           }
         }
@@ -88,3 +89,37 @@
     }
   }
 }
+@include mobile {
+  .why{
+    margin-top: 30px;
+    h4{
+      font-size : 40px !important ;
+    }
+  .why_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: center;
+    .why_chooseUS{
+      h1{font-size: 28px;}
+      
+     text-align: center;
+      
+    }
+    .Benefits{
+      justify-content: center;
+      align-items: center;
+      .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .benefits_data{
+          text-align: center;
+        }
+      }
+    }
+  
+}
+}}

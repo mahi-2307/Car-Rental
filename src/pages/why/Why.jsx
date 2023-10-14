@@ -7,8 +7,7 @@ import whyImg from "../../assets/why.png";
 function Why() {
   return (
     <section className="why">
-      
-          <h4>Why Choose Us</h4>
+      <h4>Why Choose Us</h4>
       <div className="why_content">
         <div className="why_chooseUS">
           <h1>Best valued deals in the segment</h1>
@@ -24,8 +23,8 @@ function Why() {
         </div>
         <div className="Benefits">
           <div className="container">
-          <div className="image">
-            <AttachMoneyIcon className="icon"/>
+            <div className="image">
+              <AttachMoneyIcon className="icon" />
             </div>
             <div className="benefits_data">
               <h3>Inter State Drive</h3>
@@ -36,8 +35,8 @@ function Why() {
             </div>
           </div>
           <div className="container">
-          <div className="image">
-            <GpsFixedIcon className="icon"/>
+            <div className="image">
+              <GpsFixedIcon className="icon" />
             </div>
             <div className="benefits_data">
               <h3>All Inclusive Pricing</h3>
@@ -49,7 +48,7 @@ function Why() {
           </div>
           <div className="container">
             <div className="image">
-            <SavingsIcon className="icon"/>
+              <SavingsIcon className="icon" />
             </div>
             <div className="benefits_data">
               <h3>No Hidden Charges</h3>

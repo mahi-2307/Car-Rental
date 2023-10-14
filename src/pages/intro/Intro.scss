@@ -1,29 +1,42 @@
+@import "../../Styles.scss";
 .intro {
   height: calc(100vh - 60px);
 
+  @include tablet{
+    height: 60vh;
+  }
+
   .landingPage {
     display: grid;
-    grid-template-columns:
-      37vw
-      auto;
-    justify-content: center;
+    grid-template-columns: 30vw 40vw;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 100px;
-    padding-top: 50px;
+    margin: 50px 0;
+    @include tablet {
+      display: grid;
+      gap: 10px;
+    }
     .left {
+      
       .top {
+        margin-bottom: 10px 0;
         font-size: 40px;
       }
       .middle {
         font-size: 60px;
+        margin-bottom: 10px 0;
+        font-weight: 900;
         span {
           color: #e88432;
         }
       }
       .tagline {
         font-weight: 500;
+        line-height: 20px;
       }
       .bottom {
+        display: flex;
+        gap: 10px;
         button {
           margin-top: 10px;
           outline: none;
@@ -37,13 +50,12 @@
         }
         .book {
           background-color: #e88432;
-          // box-shadow: 0 1px 6px 1px rgb(174, 123, 21);
           font-weight: 500;
         }
         .learnMore {
           background-color: black;
           color: white;
-          margin: 0 10px;
+        
         }
         .learnMore:hover {
           color: #000;
@@ -52,11 +64,51 @@
           font-weight: 500;
         }
       }
+      @include tablet {
+        .top {
+          font-size: 30px;
+        }
+        .middle {
+          font-size: 40px;
+        }
+        .bottom {
+          display: flex;
+          gap: 10px;
+          button {
+          }
+        }
+      }
     }
     .right {
       img {
-        width: 50vw;
+        width: 40vw;
+        height: 63vh;
+        overflow-x: hidden;
+      }
+      @include tablet {
+        img {
+          width: 40vw;
+          height: 40vh;
+        }
       }
     }
+   
   }
 }
+@include mobile{
+  .intro{
+  .landingPage{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: 10px;
+   .right{
+     display: none;
+    }
+    .bottom{
+    justify-content: center;
+    align-self: center;
+  }
+}
+}}

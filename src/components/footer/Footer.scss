@@ -1,3 +1,4 @@
+@import "../../Styles.scss";
 .footer {
   display: flex;
   justify-content: space-between;
@@ -57,4 +58,12 @@ box-shadow: 1px 1px 4px 1px black;
 transition: ease-in .2s;
     }
   }
+}
+@include mobile{
+.footer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 20px;
+}
 }

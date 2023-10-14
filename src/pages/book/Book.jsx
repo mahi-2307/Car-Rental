@@ -107,7 +107,6 @@ function Book() {
   return (
     <>
       <section className="bookCar">
-   
         <div className="container">
           <div className="title">
             <h1>Book a car</h1>
@@ -270,9 +269,7 @@ function Book() {
           </div>
           <div className="booking-modal__car-info__model">
             {imgUrl && <img src={imgUrl} alt="car_img" />}
-            <h5>
-           {type}
-            </h5>
+            <h5>{type}</h5>
           </div>
         </div>
         {/* personal info */}
@@ -385,11 +382,10 @@ function Book() {
               <input type="checkbox"></input>
               <p>Please send me latest news and updates</p>
             </span>
-
           </form>
-            <div className="reserve-button">
-              <button>Reserve Now</button>
-            </div>
+          <div className="reserve-button">
+            <button>Reserve Now</button>
+          </div>
         </div>
       </div>
     </>

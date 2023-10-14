@@ -45,7 +45,6 @@ console.log(selectedCar);
   }
   return (
     <section className="carfleet">
-      <div className="container">
         <div className="top">
           <h1>Our entire car fleet</h1>
           <p>
@@ -54,6 +53,7 @@ console.log(selectedCar);
             next adventure or business trip
           </p>
         </div>
+     
         <div className="bottom">
           <div className="list-of-cars">
             <button
@@ -99,7 +99,7 @@ console.log(selectedCar);
           <div className="details-of-car">
           <Cardetails selectedCar={selectedCar} />
           </div>
-        </div>
+        
       </div>
     </section>
   );
