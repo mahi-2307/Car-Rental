@@ -1,9 +1,13 @@
 @import "../../Styles.scss";
 .download-section {
+display: flex;
+justify-content: center;
+align-items: center;
 
   height: 80vh;
   background: url("../../assets//bg.jpg") no-repeat;
   margin: 50px 0;
+  
   .container {
     width: 40vw;
     position: absolute;

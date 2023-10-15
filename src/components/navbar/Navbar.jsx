@@ -22,9 +22,9 @@ function Navbar() {
         </Link>
         <Link
           activeClass="active"
-          to="about"
+          to="why"
           smooth={true}
-          offset={-73}
+          offset={0}
           duration={500}
           className="desktopMenuList"
         >
@@ -32,7 +32,7 @@ function Navbar() {
         </Link>
         <Link
           activeClass="active"
-          to="contact"
+          to="footer"
           smooth={true}
           offset={-60}
           duration={500}
@@ -60,7 +60,7 @@ function Navbar() {
         </Link>
         <Link
           activeClass="active"
-          to="about"
+          to="why"
           smooth={true}
           offset={-73}
           duration={500}
@@ -70,7 +70,7 @@ function Navbar() {
         </Link>
         <Link
           activeClass="active"
-          to="contact"
+          to="footer"
           smooth={true}
           offset={-60}
           duration={500}
