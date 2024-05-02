@@ -10,7 +10,7 @@ const CarData = [
   },
   {
     id: 2,
-    Name: "Volkeswagen Golf",
+    Name: "Volkeswagen Passsat",
     price: 200,
     year: 2019,
     Capacity: 5,
